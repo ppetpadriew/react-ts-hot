@@ -34,14 +34,15 @@ var config = {
     plugins:[
 
         // new webpack.optimize.UglifyJsPlugin({mangle: false, sourcemap: false})
-        new webpack.HotModuleReplacementPlugin(),
+
         // enable HMR globally
+        new webpack.HotModuleReplacementPlugin(),
 
-        new webpack.NamedModulesPlugin(),
         // prints more readable module names in the browser console on HMR updates
+        new webpack.NamedModulesPlugin(),
 
-        new webpack.NoEmitOnErrorsPlugin(),
         // do not emit compiled assets that include errors
+        new webpack.NoEmitOnErrorsPlugin(),
     ],
     devServer: {
 
