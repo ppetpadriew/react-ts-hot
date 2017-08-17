@@ -1,4 +1,5 @@
 var webpack = require("webpack");
+var port = 8080;
 var config = {
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".json"]
@@ -10,7 +11,7 @@ var config = {
 
         // bundle the client for webpack-dev-server
         // and connect to the provided endpoint
-        "webpack-dev-server/client?http://localhost:3000",
+        "webpack-dev-server/client?http://localhost:" + port,
 
         // bundle the client for hot reloading
         // only- means to only hot reload for successful updates
@@ -45,6 +46,7 @@ var config = {
         new webpack.NoEmitOnErrorsPlugin(),
     ],
     devServer: {
+        port: port,
 
         // enable HMR on the server
         hot: true
