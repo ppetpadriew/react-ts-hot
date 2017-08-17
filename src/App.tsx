@@ -1,6 +1,14 @@
 import * as React from "react";
 
-class App extends React.Component<void, void>{
+interface IAppProp {
+
+}
+
+interface IAppState {
+
+}
+
+class App extends React.Component<IAppProp, IAppState>{
     public render(): JSX.Element{
         return (
             <div>
